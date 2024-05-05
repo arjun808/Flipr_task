@@ -21,7 +21,7 @@ function Signup() {
     e.preventDefault();
     console.log(formData);
     try {
-      const response = await axios.post("http://localhost:5000/api/v1/auth/signup", formData);
+      const response = await axios.post("https://flipr-task.onrender.com/api/v1/auth/signup", formData);
       // console.log(response);
   
       // Check if the request was successful (status code 2xx)

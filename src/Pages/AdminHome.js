@@ -16,7 +16,7 @@ const AdminHome = () => {
 
   const deleteUser = async (userId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/v1/auth/deleteuser/${userId}`);
+      await axios.delete(`https://flipr-task.onrender.com/api/v1/auth/deleteuser/${userId}`);
       toast.success("User deleted successfully");
       setUsers(users.filter(user => user._id !== userId));
     } catch (error) {
@@ -27,7 +27,7 @@ const AdminHome = () => {
   useEffect(() => {
     const fetchAllUsers = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/v1/auth/allusers");
+        const response = await axios.get("https://flipr-task.onrender.com/api/v1/auth/allusers");
         setUsers(response.data.data);
       } catch (error) {
         console.error('Error fetching all users:', error);
