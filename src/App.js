@@ -12,6 +12,7 @@ function App() {
     {!token && <Route path='/' element={<Login/>}/>}
   <Route path='/login' element={<Login/>}/>
 <Route path='/signup' element={<Signup/>}/>
+         {token && <Route path="/" element={<AdminPanel />} />}
 
 <Route path='/admin'
           element={
